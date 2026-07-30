@@ -112,13 +112,13 @@ function addCalendarEvent(){
 
 
 
-    saveUserData();
+saveUserData();
 
+checkEventMode();
 
-    checkEventMode();
+applyTheme();
 
-
-    showPage("calendar");
+showPage("calendar");
 
 
 }
@@ -137,23 +137,19 @@ function checkEventMode(){
 
 
 
-    const today =
-
-    new Date().toISOString().split("T")[0];
+const today = new Date().toLocaleDateString();
 
 
 
 
 
+const todaysEvents = userData.calendarEvents.filter(event => {
 
-    const todaysEvents =
+    const eventDate = new Date(event.date).toLocaleDateString();
 
-    userData.calendarEvents.filter(event =>
+    return eventDate === today;
 
-        event.date === today
-
-    );
-
+});
 
 
 
