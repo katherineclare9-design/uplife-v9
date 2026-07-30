@@ -182,23 +182,22 @@ const todaysEvents = userData.calendarEvents.filter(event => {
 
 
 
-    if(vacationToday){
+if(eventToday){
 
 
-        userData.mode = "Vacation";
+    userData.mode = "Event";
 
 
-    }
+}
 
 
-    else if(eventToday){
+else if(vacationToday){
 
 
-        userData.mode = "Event";
+    userData.mode = "Vacation";
 
 
-    }
-
+}
 
     else{
 
