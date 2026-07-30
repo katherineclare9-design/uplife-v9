@@ -131,94 +131,38 @@ showPage("calendar");
 
 function checkEventMode(){
 
-    
+    const today = new Date().toISOString().split("T")[0];
 
 
-
-
-
-const today = new Date().toLocaleDateString();
-
-
-
-
-
-const todaysEvents = userData.calendarEvents.filter(event => {
-
-    const eventDate = new Date(event.date).toLocaleDateString();
-
-    return eventDate === today;
-
-});
-
-
-
-
-
-    const vacationToday =
-
-    todaysEvents.some(event =>
-
-        event.type === "Vacation"
-
+    const todaysEvent = userData.calendarEvents.find(event =>
+        event.date === today
     );
 
 
-
-
-
-
-    const eventToday =
-
-    todaysEvents.some(event =>
-
-        event.type === "Event"
-
-    );
-
-
-
-
-
-
-
-if(eventToday){
-
-
-    userData.mode = "Event";
-
-
-}
-
-
-else if(vacationToday){
-
-
-    userData.mode = "Vacation";
-
-
-}
-
-    else{
-
+    if(!todaysEvent){
 
         userData.mode = "Regular";
 
+    }
+
+    else if(todaysEvent.type === "Vacation"){
+
+        userData.mode = "Vacation";
+
+    }
+
+    else if(todaysEvent.type === "Event"){
+
+        userData.mode = "Event";
 
     }
 
 
-
-
-
     saveUserData();
-
 
     applyTheme();
 
-
 }
-
 
 // =====================
 // CALENDAR DAY CREATOR
