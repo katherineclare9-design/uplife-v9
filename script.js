@@ -301,23 +301,11 @@ function openCalendarDay(date){
 
 <select id="eventType">
 
+<option value="Event">Event</option>
 
-<option value="Vacation">
-
-Vacation
-
-</option>
-
-
-<option value="Event">
-
-Event
-
-</option>
-
+<option value="Vacation">Vacation</option>
 
 </select>
-
 
 
 <button onclick="addCalendarEvent()">
