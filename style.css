@@ -225,9 +225,7 @@ textarea{
 
     display:flex;
 
-    justify-content:center;
-
-    gap:5px;
+    gap:10px;
 
     padding:10px;
 
@@ -235,15 +233,23 @@ textarea{
 
     box-shadow:0 -5px 15px rgba(0,0,0,.15);
 
-z-index:1000;
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    justify-content:flex-start;
 
 }
 
 
 
-
-
 .bottom-nav button{
+
+    flex:0 0 auto;
+
+    width:55px;
+
+    height:55px;
 
     font-size:22px;
 
