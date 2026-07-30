@@ -300,27 +300,24 @@ function openCalendarDay(date){
 
 
 
-    <select id="eventType">
+<select id="eventType">
 
 
-    <option value="Event">
+<option value="Vacation">
 
-    Event
+Vacation
 
-    </option>
-
-
-
-    <option value="Vacation">
-
-    Vacation
-
-    </option>
+</option>
 
 
+<option value="Event">
 
-    </select>
+Event
 
+</option>
+
+
+</select>
 
 
 
