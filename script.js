@@ -134,9 +134,12 @@ function checkEventMode(){
     const today = new Date().toISOString().split("T")[0];
 
 
-    const todaysEvent = userData.calendarEvents.find(event =>
-        event.date === today
-    );
+const todaysEvents = userData.calendarEvents.filter(event =>
+    event.date === today
+);
+
+
+const todaysEvent = todaysEvents[todaysEvents.length - 1];
 
 
     if(!todaysEvent){
