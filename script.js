@@ -90,23 +90,20 @@ function addCalendarEvent(){
 
 
 
-    userData.calendarEvents.push({
+userData.calendarEvents.push({
+
+    title:title,
+
+    date:date,
+
+    time:time,
+
+    type:type.trim()
+
+});
 
 
-        title:title,
-
-
-        date:date,
-
-
-        time:time,
-
-
-        type:type
-
-
-    });
-
+console.log("SAVED EVENT TYPE:", type);
 
 
 
