@@ -302,10 +302,11 @@ function changeMode(mode){
 
     showPage("settings");
 
-    checkEventMode();
+    if(mode !== "Period"){
+        checkEventMode();
+    }
 
 }
-
 
 
 
