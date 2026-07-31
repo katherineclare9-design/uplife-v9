@@ -1894,8 +1894,13 @@ onchange="completeWorkout('${item}')"
 <div class="card">
 
 
-<h3>🌙 Night</h3>
-
+<h3>
+${
+    userData.mode === "Period"
+    ? "🌙 Night (Optional)"
+    : "🌙 Night"
+}
+</h3>
 
 
 ${workout.nighttime.map(item=>`
