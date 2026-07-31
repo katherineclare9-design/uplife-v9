@@ -111,12 +111,19 @@ console.log("SAVED EVENT TYPE:", type);
 
 saveUserData();
 
+if(mode === "Period"){
+
+    applyTheme();
+
+    showPage("settings");
+
+    return;
+
+}
+
 checkEventMode();
 
-applyTheme();
-
-showPage("calendar");
-
+showPage("settings");
 
 }
 
